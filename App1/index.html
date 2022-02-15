@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light Bulb</title>
+    <style>
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width:500px;
+      }
+      .center-btn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        padding: 20px;
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+  <body style="background-color: black">
+    <img
+      src="./Assets/4785635.jpg"
+      id="b-eth"
+      alt="Black Etherium"
+      class="center"
+    />
+    <button id="toggleBtn" class="center-btn">Turn ON</button>
+    <script>
+      let btn = document.getElementById("toggleBtn");
+      let blackEth = document.getElementById("b-eth");
+      btn.addEventListener("click", togglrBulb);
+
+      function togglrBulb(e) {
+        if (btn.textContent.includes("ON")) {
+          blackEth.src = "./Assets/1267700.jpg";
+          btn.innerText = "Turn OFF";
+        } else {
+          blackEth.src = "./Assets/4785635.jpg";
+          btn.innerText = "Turn ON";
+        }
+      }
+    </script>
+  </body>
+</html>
